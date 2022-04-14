@@ -1,7 +1,7 @@
 # Intelligent Spectral Analysis
 
 # Abstract
-This project proposes an ML-based approach to determine the concentration of Pentanediol dissolved in water. Raman spectroscopy will be used to record light spectra for different concentrations under different settings. The aim is to create a dataset of spectra that are mapped to known concentration. In order to learn this mapping, a machine learning based approach is developed.  
+This project proposes an ML-based approach to determine the concentration of Pentanediol in dissolved in water. Raman spectroscopy will be used to record light spectra for different concentrations under different settings. The aim is to create a dataset of spectra that are mapped to known concentration. In order to learn this mapping, a machine learning based approach is developed.  
 
 This approach is subdivided into two parts: preprocessing and training. Preprocessing includes trimming and smoothing the spectra, extracting features before conducting a selection of the best features. The training stage involves training and comparing the performance of different regression models using Cross-Validation in order to select a promising model, before fine-tuning it with Grid Search. Finally, an evaluation is conducted, from which conclusions and improvement suggestions are drawn.  
 
