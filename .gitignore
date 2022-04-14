@@ -1,5 +1,6 @@
 # data
 data/raw/*.csv
+data/raw/pentanediol.txt
 
 playground/
 
