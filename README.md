@@ -10,8 +10,8 @@ This approach is subdivided into two parts: preprocessing and training. Preproce
 # How to reproduce results?
 
 ## Data
-1. Download the raw data 'pentandiol.txt' from Google Drive using the following [URL](https://drive.google.com/file/d/16NH1MDH6PU-ZU7xEN8VZw7G6KYfUE8gg/view?usp=sharing).  
-2. Move the file 'pentandiol.txt' into the directory `data/raw`.  
+1. Download the raw data 'pentanediol.txt' from Google Drive using the following [URL](https://drive.google.com/file/d/16NH1MDH6PU-ZU7xEN8VZw7G6KYfUE8gg/view?usp=sharing).  
+2. Move the file 'pentanediol.txt' into the directory `data/raw`.  
 
 ## Libraries
 Install the following libraries:
