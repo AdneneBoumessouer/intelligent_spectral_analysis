@@ -1,0 +1,61 @@
+,type,complexity,description,function,parameters,n_features,use,tag
+FFT mean coefficient,spectral,constant,Computes the mean value of each spectrogram frequency.,tsfel.fft_mean_coeff,"{'fs': 100, 'nfreq': 256}",nfreq,yes,
+Fundamental frequency,spectral,log,Computes the fundamental frequency.,tsfel.fundamental_frequency,{'fs': 100},1,yes,
+Human range energy,spectral,log,Computes the human range energy ratio given by the ratio between the energy in frequency 0.6-2.5Hz and the whole energy band.,tsfel.human_range_energy,{'fs': 100},1,yes,inertial
+LPCC,spectral,log,Computes the linear prediction cepstral coefficients.,tsfel.lpcc,{'n_coeff': 12},n_coeff,yes,audio
+MFCC,spectral,constant,Computes the MEL cepstral coefficients.,tsfel.mfcc,"{'cep_lifter': 22, 'fs': 100, 'nfft': 512, 'nfilt': 40, 'num_ceps': 12, 'pre_emphasis': 0.97}",num_ceps,yes,"['audio', 'emg']"
+Max power spectrum,spectral,log,Computes the maximum power spectrum density.,tsfel.max_power_spectrum,{'fs': 100},1,yes,
+Maximum frequency,spectral,log,Computes the maximum frequency.,tsfel.max_frequency,{'fs': 100},1,yes,
+Median frequency,spectral,log,Computes the median frequency.,tsfel.median_frequency,{'fs': 100},1,yes,
+Power bandwidth,spectral,log,Computes power spectrum density bandwidth of the signal.,tsfel.power_bandwidth,{'fs': 100},1,yes,
+Spectral centroid,spectral,linear,Computes the barycenter of the spectrum.,tsfel.spectral_centroid,{'fs': 100},1,yes,audio
+Spectral decrease,spectral,log,Computes the amount of decreasing of the spectra amplitude.,tsfel.spectral_decrease,{'fs': 100},1,yes,
+Spectral distance,spectral,log,Computes the signal spectral distance.,tsfel.spectral_distance,{'fs': 100},1,yes,
+Spectral entropy,spectral,log,Computes the spectral entropy of the signal based on Fourier transform.,tsfel.spectral_entropy,{'fs': 100},1,yes,eeg
+Spectral kurtosis,spectral,linear,Computes the flatness of a distribution around its mean value.,tsfel.spectral_kurtosis,{'fs': 100},1,yes,
+Spectral positive turning points,spectral,log,Computes number of positive turning points of the fft magnitude signal,tsfel.spectral_positive_turning,{'fs': 100},1,yes,
+Spectral roll-off,spectral,log,Computes the frequency where 95% of the signal magnitude is contained below of this value.,tsfel.spectral_roll_off,{'fs': 100},1,yes,audio
+Spectral roll-on,spectral,log,Computes the frequency where 5% of the signal magnitude is contained below of this value.,tsfel.spectral_roll_on,{'fs': 100},1,yes,
+Spectral skewness,spectral,linear,Computes the asymmetry of a distribution around its mean value.,tsfel.spectral_skewness,{'fs': 100},1,yes,
+Spectral slope,spectral,log,"Computes the spectral slope, obtained by linear regression of the spectral amplitude.",tsfel.spectral_slope,{'fs': 100},1,yes,
+Spectral spread,spectral,linear,Computes the spread of the spectrum around its mean value.,tsfel.spectral_spread,{'fs': 100},1,yes,
+Spectral variation,spectral,log,Computes the amount of variation of the spectrum along time.,tsfel.spectral_variation,{'fs': 100},1,yes,
+Wavelet absolute mean,spectral,linear,Computes CWT absolute mean value of each wavelet scale.,tsfel.wavelet_abs_mean,"{'function': 'scipy.signal.ricker', 'widths': 'np.arange(1,10)'}",widths,yes,"['eeg', 'ecg']"
+Wavelet energy,spectral,linear,Computes CWT energy of each wavelet scale.,tsfel.wavelet_energy,"{'function': 'scipy.signal.ricker', 'widths': 'np.arange(1,10)'}",widths,yes,eeg
+Wavelet entropy,spectral,linear,Computes CWT entropy of the signal.,tsfel.wavelet_entropy,"{'function': 'scipy.signal.ricker', 'widths': 'np.arange(1,10)'}",1,yes,eeg
+Wavelet standard deviation,spectral,linear,Computes CWT std value of each wavelet scale.,tsfel.wavelet_std,"{'function': 'scipy.signal.ricker', 'widths': 'np.arange(1,10)'}",widths,yes,eeg
+Wavelet variance,spectral,linear,Computes CWT variance value of each wavelet scale.,tsfel.wavelet_var,"{'function': 'scipy.signal.ricker', 'widths': 'np.arange(1,10)'}",widths,yes,eeg
+ECDF,statistical,log,Computes the values of ECDF (empirical cumulative distribution function) along the time axis.,tsfel.ecdf,{'d': 10},d,yes,
+ECDF Percentile,statistical,log,Determines the percentile value of the ECDF.,tsfel.ecdf_percentile,"{'percentile': '[0.2, 0.8]'}",percentile,yes,
+ECDF Percentile Count,statistical,log,Determines the cumulative sum of samples that are less than the percentile.,tsfel.ecdf_percentile_count,"{'percentile': '[0.2, 0.8]'}",percentile,yes,
+Histogram,statistical,log,Computes histogram of the signal.,tsfel.hist,"{'nbins': 10, 'r': 1}",nbins,yes,
+Interquartile range,statistical,constant,Computes interquartile range of the signal.,tsfel.interq_range,,1,yes,
+Kurtosis,statistical,constant,Computes kurtosis of the signal.,tsfel.kurtosis,,1,yes,
+Max,statistical,constant,Computes the maximum value of the signal.,tsfel.calc_max,,1,yes,
+Mean,statistical,constant,Computes the mean value of the signal.,tsfel.calc_mean,,1,yes,inertial
+Mean absolute deviation,statistical,log,Computes mean absolute deviation of the signal.,tsfel.mean_abs_deviation,,1,yes,
+Median,statistical,constant,Computes median of the signal.,tsfel.calc_median,,1,yes,
+Median absolute deviation,statistical,constant,Computes median absolute deviation of the signal.,tsfel.median_abs_deviation,,1,yes,
+Min,statistical,constant,Computes the minimum value of the signal.,tsfel.calc_min,,1,yes,
+Root mean square,statistical,constant,Computes root mean square of the signal.,tsfel.rms,,1,yes,"['emg', 'inertial']"
+Skewness,statistical,constant,Computes skewness of the signal.,tsfel.skewness,,1,yes,
+Standard deviation,statistical,constant,Computes standard deviation of the signal.,tsfel.calc_std,,1,yes,
+Variance,statistical,constant,Computes variance of the signal.,tsfel.calc_var,,1,yes,
+Absolute energy,temporal,log,Computes the absolute energy of the signal.,tsfel.abs_energy,,1,yes,audio
+Area under the curve,temporal,log,Computes the area under the curve of the signal computed with trapezoid rule.,tsfel.auc,{'fs': 100},1,yes,
+Autocorrelation,temporal,constant,Computes autocorrelation of the signal.,tsfel.autocorr,,1,yes,inertial
+Centroid,temporal,constant,Computes the centroid along the time axis.,tsfel.calc_centroid,{'fs': 100},1,yes,
+Entropy,temporal,log,Computes the entropy of the signal using the Shannon Entropy.,tsfel.entropy,{'prob': 'standard'},1,yes,eeg
+Mean absolute diff,temporal,constant,Computes mean absolute differences of the signal.,tsfel.mean_abs_diff,,1,yes,
+Mean diff,temporal,constant,Computes mean of differences of the signal.,tsfel.mean_diff,,1,yes,
+Median absolute diff,temporal,constant,Computes median absolute differences of the signal.,tsfel.median_abs_diff,,1,yes,
+Median diff,temporal,constant,Computes median of differences of the signal.,tsfel.median_diff,,1,yes,
+Negative turning points,temporal,constant,Computes number of negative turning points of the signal.,tsfel.negative_turning,,1,yes,emg
+Neighbourhood peaks,temporal,constant,Computes the number of peaks from a defined neighbourhood of the signal.,tsfel.neighbourhood_peaks,{'n': 10},1,yes,
+Peak to peak distance,temporal,constant,Computes the peak to peak distance.,tsfel.pk_pk_distance,,1,yes,
+Positive turning points,temporal,constant,Computes number of positive turning points of the signal.,tsfel.positive_turning,,1,yes,emg
+Signal distance,temporal,constant,Computes signal traveled distance.,tsfel.distance,,1,yes,
+Slope,temporal,log,Computes the slope of the signal by fitting a linear equation to the observed data.,tsfel.slope,,1,yes,
+Sum absolute diff,temporal,constant,Computes sum of absolute differences of the signal.,tsfel.sum_abs_diff,,1,yes,
+Total energy,temporal,constant,Computes the total energy of the signal.,tsfel.total_energy,{'fs': 100},1,yes,audio
+Zero crossing rate,temporal,constant,Computes Zero-crossing rate of the signal.,tsfel.zero_cross,,1,yes,"['audio', 'emg']"

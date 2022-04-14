@@ -1,7 +1,10 @@
 # data
-data/raw/
+data/raw/*.csv
 
 playground/
+
+# individual files
+02_Preprocess.py
 
 # vscode
 .vscode

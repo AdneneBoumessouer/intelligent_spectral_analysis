@@ -52,7 +52,7 @@ def smooth_data(df, window_length=21, polyorder=5):
     Apply a Savitzky-Golay filter spectrograms contained in DataFrame.
     Column 'x' remains unchanged"""
     x = df.x
-    smoothed = signal.savgol_filter(df, window_length=21, polyorder=5, axis=0)
+    smoothed = signal.savgol_filter(df, window_length=window_length, polyorder=polyorder, axis=0)
     df_smoothed = pd.DataFrame(smoothed, columns=df.columns)
     df_smoothed.x = x.values
     return df_smoothed
